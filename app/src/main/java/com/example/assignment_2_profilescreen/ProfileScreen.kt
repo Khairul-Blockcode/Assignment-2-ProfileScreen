@@ -4,7 +4,6 @@ import androidx.compose.foundation.BorderStroke
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -47,7 +46,6 @@ fun ProfileScreen(
 ) {
     val comfortaa = FontFamily(Font(R.font.cb))
     val robotoBold = FontFamily(Font(R.font.rb))
-
     val nameStyle = TextStyle(
         fontFamily = comfortaa,
         fontSize = 36.sp,
@@ -55,7 +53,7 @@ fun ProfileScreen(
         lineHeight = 40.sp,
         letterSpacing = (-0.015).em,
         textAlign = TextAlign.Center,
-        color = Color.Black
+        color = Color(0xFF000000),
     )
     val locationStyle = TextStyle(
         fontFamily = robotoBold,
@@ -64,7 +62,7 @@ fun ProfileScreen(
         lineHeight = 15.sp,
         letterSpacing = 0.04.em,
         textAlign = TextAlign.Center,
-        color = Color.Black
+        color = Color(0xFF000000)
     )
 
     Column {
@@ -80,6 +78,7 @@ fun ProfileScreen(
             Image(
                 painter = profilePicPainter,
                 contentDescription = null,
+                contentScale = ContentScale.FillBounds,
                 modifier = Modifier.constrainAs(pic) {
                     width = Dimension.value(128.dp)
                     height = Dimension.value(128.dp)
@@ -120,7 +119,7 @@ fun ProfileScreen(
                     top.linkTo(parent.top, 280.dp)
                     start.linkTo(parent.start, 16.dp)
                 }
-                    .background(Color.Black, shape = RoundedCornerShape(10.dp)),
+                    .background(    color = Color(0xFF000000), shape = RoundedCornerShape(6.dp)),
                 colors = ButtonDefaults.buttonColors(containerColor = Color.Black)
             ) {
                 Text(text = "FOLLOW JANE", color = Color.White, fontWeight = FontWeight.SemiBold)
@@ -152,7 +151,7 @@ fun ProfileScreen(
             items(imageList.size) { index ->
                 Image(
                     painter = imageList[index],
-                    contentScale = ContentScale.Crop,
+                    contentScale = ContentScale.FillBounds,
                     contentDescription = null,
                     modifier = Modifier
                         .size(107.dp)
