@@ -64,7 +64,6 @@ fun ProfileScreen(
         textAlign = TextAlign.Center,
         color = Color(0xFF000000)
     )
-
     Column {
         ConstraintLayout(
             modifier = Modifier
