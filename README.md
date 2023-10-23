@@ -20,9 +20,9 @@ This repository contains a profile screen implemented using Jetpack Compose, the
 git clone https://github.com/your-username/assignment_2_profilescreen.git
 ```
 
-2. Open the project using Android Studio Arctic Fox (or newer).
+2. Open the project using Android Studio.
 
-3. Make sure you have the Jetpack Compose toolkit setup in your Android Studio.
+3. Make sure you have the Jetpack Compose toolkit set up in your Android Studio.
 
 4. Run the project on an emulator or physical device.
 
@@ -35,7 +35,7 @@ The `ProfileScreen` composable function takes in:
 - `imageList`: A list of painters representing user images.
 
 The screen consists of:
-- A `ConstraintLayout` used to position the profile picture, name, location, and action buttons.
+- A `ConstraintLayout` is used to position the profile picture, name, location, and action buttons.
 - A `LazyVerticalGrid` to display the user images in a grid format.
 
 Custom text styles and font families (`Comfortaa` & `RobotoBold`) are used to style the text elements.
@@ -56,5 +56,3 @@ Feel free to open issues or PRs if you find any bugs or have suggestions for imp
 This project is under the MIT license. See the [LICENSE](LICENSE) for more information.
 
 ---
-
-Note: Replace placeholders such as `your-username` with appropriate values. You might also want to add the `preview.png` image (or any other name you choose) to the repository root, which provides a visual representation of the `ProfileScreen`.
